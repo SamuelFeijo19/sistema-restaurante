@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title>Cardápio do Restaurante</title>
+</head>
+<body style="
+    background: rgb(127,131,132);
+background: linear-gradient(156deg, rgba(127,131,132,1) 0%, rgba(13,13,13,1) 20%, rgba(0,0,0,1) 36%, rgba(1,1,1,1) 20%, rgba(14,14,19,1) 67%, rgba(65,65,88,1) 85%, rgba(95,97,109,1) 96%, rgba(127,131,132,1) 100%);
+">
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">LogoHamburgueria</a>
+      </nav>
+
+    <div class="container mt-5">
+        <div class="row">
+          <div class="col-md-6" style="margin-bottom: 30px;">
+            <div class="card shadow-lg">
+              <img src="img/img1.jpg" class="card-img-top" alt="">
+              <div class="card-body">
+                <h2 class="card-title">Hambúrguer Fit</h2>
+                <p class="card-text">Delicie-se com o nosso suculento...</p>
+                <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#order-modal" data-whatever="@getbootstrap" onclick="openModal('Hambúrguer Fit')">Pedir</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-6"  style="margin-bottom: 30px;">
+            <div class="card shadow-lg">
+              <img src="img/img2.webp" class="card-img-top" alt="">
+              <div class="card-body">
+                <h2 class="card-title">Hambúrguer Cheddar</h2>
+                <p class="card-text">Apresentamos o nosso irresistível...</p>
+                <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#order-modal" data-whatever="@getbootstrap" onclick="openModal('Hambúrguer Cheddar')">Pedir</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<div class="modal fade" id="order-modal"  role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Finalizando Pedido</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <div class="form-group">
+            <div id="nomeProduto"></div>
+            <label for="recipient-name" class="col-form-label">Seu nome:</label>
+            <input type="text" class="form-control" id="client-name" placeholder="Seu Nome">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Seu endereço:</label>
+            <input type="text" class="form-control" id="client-address" placeholder="Bairro: xxx | Rua: xxx | Número: xxx">
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary"  onclick="sendOrder()">Fazer Pedido</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- <div id="order-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-button" onclick="closeModal()">&times;</span>
+      <h2>Fazer Pedido</h2>
+      <div id="nomeProduto"></div>
+      <input type="text" id="client-name" placeholder="Seu Nome">
+      <input type="text" id="client-address" placeholder="Seu Endereço">
+      <button onclick="sendOrder()">Enviar Pedido</button>
+    </div>
+  </div> -->
+
+  <script src="js/script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
